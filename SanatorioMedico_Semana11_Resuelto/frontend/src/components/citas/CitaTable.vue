@@ -1,0 +1,6 @@
+<script setup>
+defineProps({ citas:{type:Array,default:()=>[]}, busy:Boolean })
+defineEmits(['consult','edit','delete'])
+const fecha=v=>v ? new Date(v).toLocaleString() : '—'
+</script>
+<template><div class="cita-table-wrap"><table class="cita-table"><thead><tr><th>Fecha y hora</th><th>Paciente</th><th>Colaborador</th><th>Sucursal</th><th>Especialidad</th><th>Motivo</th><th>Estado</th><th>Acciones</th></tr></thead><tbody><tr v-for="c in citas" :key="c.id"><td>{{ fecha(c.FechaHoraCita) }}</td><td>{{ c._CodigoPacienteDescripcion || 'Referencia no disponible' }}</td><td>{{ c._CodigoColaboradorDescripcion || 'Referencia no disponible' }}</td><td>{{ c._CodigoSucursalDescripcion || 'Referencia no disponible' }}</td><td>{{ c._CodigoEspecialidadDescripcion || 'Referencia no disponible' }}</td><td class="cita-reason">{{ c.MotivoConsulta }}</td><td><span class="cita-status">{{ c.Estado }}</span></td><td><div class="cita-row-actions"><button :disabled="busy" @click="$emit('consult',c)">Consultar</button><button :disabled="busy" @click="$emit('edit',c)">Editar</button><button class="cita-danger-outline" :disabled="busy" @click="$emit('delete',c)">Eliminar</button></div></td></tr><tr v-if="!citas.length"><td colspan="8" class="cita-empty">No hay citas para mostrar.</td></tr></tbody></table></div></template>

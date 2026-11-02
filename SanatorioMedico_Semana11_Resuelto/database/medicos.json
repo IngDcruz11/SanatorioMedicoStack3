@@ -1,0 +1,7 @@
+[
+  {"_id":{"$oid":"672000000000000000000001"},"nombres":"Roberto","apellidos":"Méndez Castillo","numero_colegiado":"COL-15421","especialidad":"Medicina General","telefono":"5553-1001","correo":"roberto.mendez@sanatorio.test","horario_atencion":"Lunes a viernes 08:00-14:00","estado":true},
+  {"_id":{"$oid":"672000000000000000000002"},"nombres":"Andrea","apellidos":"Morales López","numero_colegiado":"COL-17602","especialidad":"Pediatría","telefono":"5553-1002","correo":"andrea.morales@sanatorio.test","horario_atencion":"Lunes, miércoles y viernes 09:00-16:00","estado":true},
+  {"_id":{"$oid":"672000000000000000000003"},"nombres":"Carlos","apellidos":"Ramírez Soto","numero_colegiado":"COL-18450","especialidad":"Cardiología","telefono":"5553-1003","correo":"carlos.ramirez@sanatorio.test","horario_atencion":"Martes y jueves 10:00-17:00","estado":true},
+  {"_id":{"$oid":"672000000000000000000004"},"nombres":"Elena","apellidos":"Pérez Hernández","numero_colegiado":"COL-20118","especialidad":"Ginecología","telefono":"5553-1004","correo":"elena.perez@sanatorio.test","horario_atencion":"Lunes a jueves 13:00-18:00","estado":true},
+  {"_id":{"$oid":"672000000000000000000005"},"nombres":"Miguel","apellidos":"Gómez García","numero_colegiado":"COL-22307","especialidad":"Traumatología","telefono":"5553-1005","correo":"miguel.gomez@sanatorio.test","horario_atencion":"Sábados 08:00-13:00","estado":false}
+]

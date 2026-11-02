@@ -1,0 +1,507 @@
+{
+  "info": {
+    "name": "Sanatorio Médico - Semana 11",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000/api"
+    },
+    {
+      "key": "id",
+      "value": "PEGAR_OBJECT_ID_AQUI"
+    }
+  ],
+  "item": [
+    {
+      "name": "PING MongoDB",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/ping",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "ping"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Sucursales",
+      "item": [
+        {
+          "name": "Consultar sucursales",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/sucursales",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sucursales"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar sucursales",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/sucursales?buscar=Prueba",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sucursales"
+              ],
+              "query": [
+                {
+                  "key": "buscar",
+                  "value": "Prueba"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Agregar sucursales",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Sucursal Prueba\",\n  \"direccion\": \"Zona 1\",\n  \"telefono\": \"5555-0001\",\n  \"correo\": \"prueba@sanatorio.test\",\n  \"ciudad\": \"Cuilapa\",\n  \"departamento\": \"Santa Rosa\",\n  \"fecha_apertura\": \"2026-10-01\",\n  \"tipo_sucursal\": \"Clínica\",\n  \"estado\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/sucursales",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sucursales"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Consultar por ID sucursales",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/sucursales/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sucursales",
+                "{{id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Editar sucursales",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Sucursal Prueba\",\n  \"direccion\": \"Zona 1\",\n  \"telefono\": \"5555-0001\",\n  \"correo\": \"prueba@sanatorio.test\",\n  \"ciudad\": \"Cuilapa\",\n  \"departamento\": \"Santa Rosa\",\n  \"fecha_apertura\": \"2026-10-01\",\n  \"tipo_sucursal\": \"Clínica\",\n  \"estado\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/sucursales/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sucursales",
+                "{{id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar sucursales",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/sucursales/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sucursales",
+                "{{id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pacientes",
+      "item": [
+        {
+          "name": "Consultar pacientes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/pacientes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pacientes"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar pacientes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/pacientes?buscar=Prueba",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pacientes"
+              ],
+              "query": [
+                {
+                  "key": "buscar",
+                  "value": "Prueba"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Agregar pacientes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombres\": \"Paciente\",\n  \"apellidos\": \"Prueba\",\n  \"documento_identificacion\": \"9999 99999 9999\",\n  \"fecha_nacimiento\": \"2000-01-01\",\n  \"telefono\": \"5555-0002\",\n  \"correo\": \"paciente@prueba.test\",\n  \"direccion\": \"Cuilapa\",\n  \"contacto_emergencia\": \"Contacto - 5555-0003\",\n  \"estado\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/pacientes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pacientes"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Consultar por ID pacientes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/pacientes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pacientes",
+                "{{id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Editar pacientes",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombres\": \"Paciente\",\n  \"apellidos\": \"Prueba\",\n  \"documento_identificacion\": \"9999 99999 9999\",\n  \"fecha_nacimiento\": \"2000-01-01\",\n  \"telefono\": \"5555-0002\",\n  \"correo\": \"paciente@prueba.test\",\n  \"direccion\": \"Cuilapa\",\n  \"contacto_emergencia\": \"Contacto - 5555-0003\",\n  \"estado\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/pacientes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pacientes",
+                "{{id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar pacientes",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/pacientes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pacientes",
+                "{{id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Medicos",
+      "item": [
+        {
+          "name": "Consultar medicos",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medicos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "medicos"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar medicos",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medicos?buscar=Prueba",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "medicos"
+              ],
+              "query": [
+                {
+                  "key": "buscar",
+                  "value": "Prueba"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Agregar medicos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombres\": \"Médico\",\n  \"apellidos\": \"Prueba\",\n  \"numero_colegiado\": \"COL-99999\",\n  \"especialidad\": \"Medicina General\",\n  \"telefono\": \"5555-0004\",\n  \"correo\": \"medico@prueba.test\",\n  \"horario_atencion\": \"Lunes a viernes 08:00-16:00\",\n  \"estado\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/medicos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "medicos"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Consultar por ID medicos",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medicos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "medicos",
+                "{{id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Editar medicos",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombres\": \"Médico\",\n  \"apellidos\": \"Prueba\",\n  \"numero_colegiado\": \"COL-99999\",\n  \"especialidad\": \"Medicina General\",\n  \"telefono\": \"5555-0004\",\n  \"correo\": \"medico@prueba.test\",\n  \"horario_atencion\": \"Lunes a viernes 08:00-16:00\",\n  \"estado\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/medicos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "medicos",
+                "{{id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eliminar medicos",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/medicos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "medicos",
+                "{{id}}"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

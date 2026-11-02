@@ -1,0 +1,7 @@
+[
+  {"_id":{"$oid":"670000000000000000000001"},"nombre":"Sucursal Central","direccion":"1a Calle 2-15 zona 1","telefono":"7844-1001","correo":"central@sanatorio.test","ciudad":"Cuilapa","departamento":"Santa Rosa","fecha_apertura":"2022-01-10","tipo_sucursal":"Principal","estado":true},
+  {"_id":{"$oid":"670000000000000000000002"},"nombre":"Sucursal Barberena","direccion":"3a Avenida 4-20 zona 2","telefono":"7887-2202","correo":"barberena@sanatorio.test","ciudad":"Barberena","departamento":"Santa Rosa","fecha_apertura":"2023-03-15","tipo_sucursal":"Clínica","estado":true},
+  {"_id":{"$oid":"670000000000000000000003"},"nombre":"Sucursal Chiquimulilla","direccion":"5a Calle 1-44 zona 1","telefono":"7885-3303","correo":"chiquimulilla@sanatorio.test","ciudad":"Chiquimulilla","departamento":"Santa Rosa","fecha_apertura":"2023-08-01","tipo_sucursal":"Clínica","estado":true},
+  {"_id":{"$oid":"670000000000000000000004"},"nombre":"Sucursal Taxisco","direccion":"2a Avenida 6-12 zona 1","telefono":"7884-4404","correo":"taxisco@sanatorio.test","ciudad":"Taxisco","departamento":"Santa Rosa","fecha_apertura":"2024-02-20","tipo_sucursal":"Consultorio","estado":true},
+  {"_id":{"$oid":"670000000000000000000005"},"nombre":"Sucursal Nueva Santa Rosa","direccion":"4a Calle 3-18 zona 1","telefono":"7888-5505","correo":"nuevasantarosa@sanatorio.test","ciudad":"Nueva Santa Rosa","departamento":"Santa Rosa","fecha_apertura":"2024-06-10","tipo_sucursal":"Consultorio","estado":false}
+]
